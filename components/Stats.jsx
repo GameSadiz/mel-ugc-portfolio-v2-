@@ -11,7 +11,7 @@ export default function Stats() {
 
         <div className="stats__grid reveal">
           {stats.map((stat) => (
-            <div className="stat-block" key={stat.label}>
+            <div className="stat-block" key={stat.label} style={{ backgroundColor: stat.tone }}>
               <span className="stat-block__value">{stat.value}</span>
               <span className="stat-block__label">{stat.label}</span>
             </div>

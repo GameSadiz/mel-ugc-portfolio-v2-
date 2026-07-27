@@ -6,7 +6,6 @@ import { scrollToSection } from '../lib/scroll-to-section';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeId, setActiveId] = useState('inicio');
 
   useEffect(() => {
@@ -14,12 +13,10 @@ export default function Header() {
     const sections = navLinks.map((link) => ({ id: link.id, el: document.getElementById(link.id) })).filter(
       (entry) => entry.el
     );
-    const marker = () => (document.querySelector('.header')?.offsetHeight || 80) + 80;
+    const marker = () => (document.querySelector('.header')?.getBoundingClientRect().bottom || 128) + 80;
 
     const update = () => {
       frame = null;
-      setIsScrolled(window.scrollY > 10);
-
       let current = sections.length ? sections[0].id : navLinks[0].id;
       const line = marker();
       for (const entry of sections) {
@@ -66,7 +63,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`header${isScrolled ? ' header--scrolled' : ''}`}>
+    <header className="header">
       <div className="container header__container">
         <a href="#inicio" className="header__logo" onClick={(e) => handleNavClick(e, 'inicio')}>
           Mel
@@ -89,8 +86,8 @@ export default function Header() {
           </ul>
         </nav>
 
-        <a href="#contacto" className="btn btn--outline header__cta" onClick={(e) => handleNavClick(e, 'contacto')}>
-          Hablemos de tu marca
+        <a href="#contacto" className="btn btn--primary header__cta" onClick={(e) => handleNavClick(e, 'contacto')}>
+          Hablemos
         </a>
 
         <button

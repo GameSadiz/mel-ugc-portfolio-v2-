@@ -12,7 +12,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="footer__note">© {new Date().getFullYear()} {profile.name} UGC. Hecho con cuidado y buen café.</p>
+        <p className="footer__note">© {new Date().getFullYear()} {profile.name} UGC — hecho con actitud.</p>
       </div>
     </footer>
   );

@@ -1,18 +1,17 @@
-import { Fraunces, Inter } from 'next/font/google';
+import { Archivo_Black, DM_Sans } from 'next/font/google';
 import './globals.css';
 import RevealObserver from '../components/RevealObserver';
 
-const fraunces = Fraunces({
+const archivoBlack = Archivo_Black({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
-  variable: '--font-fraunces',
+  weight: ['400'],
+  variable: '--font-archivo-black',
 });
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-inter',
+  weight: ['400', '500', '700', '900'],
+  variable: '--font-dm-sans',
 });
 
 const DESCRIPTION =
@@ -39,7 +38,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="es" className={`${archivoBlack.variable} ${dmSans.variable}`}>
       <body>
         <RevealObserver />
         {children}

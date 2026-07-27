@@ -7,11 +7,16 @@ import { IconArrowDown } from './Icons';
 export default function Hero() {
   return (
     <section className="hero" id="inicio">
-      <div className="hero__ring" aria-hidden="true" />
+      <div className="hero__badge" aria-hidden="true">
+        {profile.role}
+      </div>
+      <div className="hero__spark" aria-hidden="true" />
 
       <div className="hero__content">
         <span className="hero__role">{profile.role}</span>
-        <h1 className="hero__name">{profile.name}</h1>
+        <h1 className="hero__name">
+          M<mark>el</mark>
+        </h1>
         <p className="hero__tagline">{profile.tagline}</p>
 
         <div className="hero__stats">
@@ -30,6 +35,7 @@ export default function Hero() {
         onClick={() => scrollToSection('portfolio')}
         aria-label="Ir al portafolio"
       >
+        Ver trabajo
         <IconArrowDown />
       </button>
     </section>

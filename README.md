@@ -1,6 +1,6 @@
-# Mel | UGC Content Creator Portfolio (v2 — minimalista claro)
+# Mel | UGC Content Creator Portfolio (v3 — bold / neo-brutalista)
 
-Segunda versión del portafolio: mismo contenido que [mel-ugc-portfolio](https://github.com/gamesadiz/mel-ugc-portfolio), pero con una estética editorial minimalista y clara en vez del tema espacial — fondo cálido claro, tipografía serif itálica, líneas finas y un único color de acento (terracota) en vez de degradados y brillos.
+Tercera versión del portafolio, con un sistema visual deliberadamente distinto a las otras dos: blanco y negro de alto contraste, acentos neón (rosa, azul, lima, naranja), bordes gruesos, sombras duras tipo sticker, tarjetas rotadas y una cinta de texto en marquesina. Sin degradados, sin serif itálica, sin fondos suaves.
 
 ## Desarrollo
 
@@ -16,9 +16,10 @@ Abre `http://localhost:3000`.
 Todo el contenido vive en `lib/content.js`:
 
 - `profile` — nombre, rol y frase de presentación del hero.
-- `stats` — cifras de seguidores/engagement/vistas/colaboraciones.
-- `portfolioItems` — piezas del portafolio. Cada una tiene un `tone` (color plano de placeholder); cuando tengas fotos reales, reemplaza el `<div className="portfolio-card__art" .../>` en `components/Portfolio.jsx` por una imagen.
-- `brands` — nombres de marcas colaboradoras.
+- `stats` — cifras de seguidores/engagement/vistas/colaboraciones, cada una con su color de fondo (`tone`).
+- `marqueeWords` — palabras de la cinta en marquesina superior.
+- `portfolioItems` — piezas del portafolio, cada una con `tone` (color plano) y `rotate` (grados de inclinación tipo sticker). Cuando tengas fotos reales, reemplaza el `<div className="portfolio-card__art" .../>` en `components/Portfolio.jsx` por una imagen.
+- `brands` — nombres de marcas colaboradoras (se repiten en bucle en la marquesina).
 - `socialLinks` — enlaces reales de Instagram/TikTok/YouTube.
 
 ## Formulario de contacto

@@ -11,12 +11,10 @@ export default function Contact() {
   };
 
   return (
-    <section className="section section--alt" id="contacto">
+    <section className="section contact" id="contacto">
       <div className="container">
-        <div className="section__header reveal" style={{ alignItems: 'center', textAlign: 'center' }}>
-          <span className="eyebrow" style={{ margin: '0 auto' }}>
-            Contacto
-          </span>
+        <div className="section__header reveal">
+          <span className="eyebrow">Contacto</span>
           <h2 className="section__title">¿Lista para elevar tu marca?</h2>
         </div>
 
